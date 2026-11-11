@@ -1,0 +1,70 @@
+{
+  "scenarios": [
+    {
+      "scenario_id": "PRIME_CHECK_001",
+      "title": "Verify smallest prime number",
+      "proto_file": "prime.proto",
+      "service": "prime.PrimeCheckerService",
+      "rpc": "CheckPrime",
+      "method_path": "/prime.PrimeCheckerService/CheckPrime",
+      "request_type": "prime.PrimeRequest",
+      "response_type": "prime.PrimeResponse",
+      "request": {
+        "number": "2"
+      },
+      "expected": {
+        "number": "2",
+        "is_prime": true
+      },
+      "assertions": [
+        {
+          "field": "number",
+          "operator": "equals",
+          "value": "2"
+        },
+        {
+          "field": "is_prime",
+          "operator": "is_true"
+        },
+        {
+          "field": "message",
+          "operator": "not_empty"
+        }
+      ],
+      "category": "BOUNDARY"
+    },
+    {
+      "scenario_id": "PRIME_CHECK_002",
+      "title": "Verify composite number",
+      "proto_file": "prime.proto",
+      "service": "prime.PrimeCheckerService",
+      "rpc": "CheckPrime",
+      "method_path": "/prime.PrimeCheckerService/CheckPrime",
+      "request_type": "prime.PrimeRequest",
+      "response_type": "prime.PrimeResponse",
+      "request": {
+        "number": "25"
+      },
+      "expected": {
+        "number": "25",
+        "is_prime": false
+      },
+      "assertions": [
+        {
+          "field": "number",
+          "operator": "equals",
+          "value": "25"
+        },
+        {
+          "field": "is_prime",
+          "operator": "is_false"
+        },
+        {
+          "field": "message",
+          "operator": "not_empty"
+        }
+      ],
+      "category": "NEGATIVE"
+    }
+  ]
+}

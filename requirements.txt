@@ -1,0 +1,9 @@
+grpcio
+grpcio-tools
+grpcio-reflection
+protobuf
+pytest
+requests
+python-dotenv
+pytest-html
+``

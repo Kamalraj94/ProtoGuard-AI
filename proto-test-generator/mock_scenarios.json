@@ -1,0 +1,60 @@
+{
+  "service": "PrimeCheckerService",
+  "rpc": "CheckPrime",
+  "scenarios": [
+    {
+      "id": "PRIME_001",
+      "description": "Verify smallest prime number",
+      "number": 2,
+      "expected": true
+    },
+    {
+      "id": "PRIME_002",
+      "description": "Verify typical prime number",
+      "number": 17,
+      "expected": true
+    },
+    {
+      "id": "PRIME_003",
+      "description": "Verify composite number",
+      "number": 25,
+      "expected": false
+    },
+    {
+      "id": "PRIME_004",
+      "description": "Verify zero",
+      "number": 0,
+      "expected": false
+    },
+    {
+      "id": "PRIME_005",
+      "description": "Verify one",
+      "number": 1,
+      "expected": false
+    },
+    {
+      "id": "PRIME_006",
+      "description": "Verify negative number",
+      "number": -7,
+      "expected": false
+    },
+    {
+      "id": "PRIME_007",
+      "description": "Verify even composite number",
+      "number": 4,
+      "expected": false
+    },
+    {
+      "id": "PRIME_008",
+      "description": "Verify perfect square",
+      "number": 49,
+      "expected": false
+    },
+    {
+      "id": "PRIME_009",
+      "description": "Verify larger prime",
+      "number": 97,
+      "expected": true
+    }
+  ]
+}

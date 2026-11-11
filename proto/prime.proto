@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package prime;
+
+option java_package = "com.protoguard.prime";
+option java_multiple_files = true;
+
+service PrimeCheckerService {
+  rpc CheckPrime (PrimeRequest) returns (PrimeResponse);
+}
+
+message PrimeRequest {
+  int64 number = 1;
+}
+
+message PrimeResponse {
+  int64 number = 1;
+  bool is_prime = 2;
+  string message = 3;
+}
